@@ -1,10 +1,10 @@
 package ru.netology.stats;
 
 public class StatsService {
-    public int calculateSumSales(int[] sales) {
-        int sum = 0; // сумма всех продаж
+    public long calculateSumSales(long[] sales) {
+        long sum = 0; // сумма всех продаж
 
-        for (int sale : sales) {
+        for (long sale : sales) {
             sum += sale;
         }
 
@@ -15,9 +15,9 @@ public class StatsService {
         return sum;
     }
 
-    public double calculateAverage(int[] sales) {
-        int sum = calculateSumSales(sales);
-        int average = sum / 12;
+    public double calculateAverage(long[] sales) {
+        long sum = calculateSumSales(sales);
+        long average = sum / 12;
 
         System.out.println(average);
 
@@ -26,20 +26,20 @@ public class StatsService {
 
     }
 
-    public int calculateMinSale(int[] sales) {
-        int minSale = 0;
-        for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < sales[minSale]) {
+    public long calculateMinSale(long[] sales) {
+        long minSale = 0;
+        for (long i = 0; i < sales.length; i++) {
+            if (sales[Math.toIntExact(i)] < sales[(int) minSale]) {
                 minSale = i;
             }
         }
         return minSale;
     }
 
-    public int calculateMaxSale(int[] sales) {
-        int maxSale = 0;
-        for (int i = 0; i < sales.length; i++) {
-            if (sales[i] > sales[maxSale]) {
+    public long calculateMaxSale(long[] sales) {
+        long maxSale = 0;
+        for (long i = 0; i < sales.length; i++) {
+            if (sales[Math.toIntExact(i)] > sales[(int) maxSale]) {
                 maxSale = i;
 
             }
@@ -47,10 +47,10 @@ public class StatsService {
         return maxSale;
     }
 
-    public double calculateBelow(int[] sales) {
-        int below = (int) calculateAverage(sales);
-        int count = 0;
-        for (int sale : sales) {
+    public double calculateBelow(long[] sales) {
+        long below = (long) calculateAverage(sales);
+        long count = 0;
+        for (long sale : sales) {
             if (sale < below) {
                 count++;
             }
@@ -58,10 +58,10 @@ public class StatsService {
         return count;
     }
 
-    public double calculateAbove(int[] sales) {
-        int below = (int) calculateAverage(sales);
-        int count = 0;
-        for (int sale : sales) {
+    public double calculateAbove(long[] sales) {
+        long below = (long) calculateAverage(sales);
+        long count = 0;
+        for (long sale : sales) {
             if (sale > below) {
                 count++;
             }
