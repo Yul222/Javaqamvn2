@@ -49,9 +49,9 @@ public class StatsServiceTest {
     @Test
     public void calculateBelow() {
         StatsService service = new StatsService();
-        long[] sale = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected = 5;
-        double actual = service.calculateBelow(sale);
+        long [] sale = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expected = 5;
+        int actual = service.calculateBelow(sale);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -60,7 +60,7 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
         long[] sale = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 5;
-        double actual = service.calculateAbove(sale);
+        int actual = service.calculateAbove(sale);
         Assertions.assertEquals(expected, actual);
     }
 }
