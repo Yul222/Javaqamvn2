@@ -47,7 +47,7 @@ public class StatsService {
         return maxSale;
     }
 
-    public double calculateBelow(long[] sales) {
+    public long calculateBelow(long[] sales) {
         long below = (long) calculateAverage(sales);
         long count = 0;
         for (long sale : sales) {
@@ -60,7 +60,7 @@ public class StatsService {
         return (int) count;
     }
 
-    public double calculateAbove(long[] sales) {
+    public long calculateAbove(long[] sales) {
         long below = (long) calculateAverage(sales);
         long count = 0;
         for (long sale : sales) {
