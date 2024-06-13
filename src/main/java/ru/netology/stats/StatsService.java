@@ -49,7 +49,7 @@ public class StatsService {
 
     public long calculateBelow(long[] sales) {
         long below = (long) calculateAverage(sales);
-        long count = 0;
+        int count = 0;
         for (long sale : sales) {
             if (sale < below) {
                 count++;
@@ -62,7 +62,7 @@ public class StatsService {
 
     public long calculateAbove(long[] sales) {
         long below = (long) calculateAverage(sales);
-        long count = 0;
+        int count = 0;
         for (long sale : sales) {
             if (sale > below) {
                 count++;
