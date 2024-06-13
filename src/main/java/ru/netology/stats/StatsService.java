@@ -57,7 +57,7 @@ public class StatsService {
         }
         System.out.println(count);
 
-        return count;
+        return (int) count;
     }
 
     public double calculateAbove(long[] sales) {
@@ -69,7 +69,7 @@ public class StatsService {
             }
         }
         System.out.println(count);
-        return count;
+        return (int) count;
     }
 }
 
