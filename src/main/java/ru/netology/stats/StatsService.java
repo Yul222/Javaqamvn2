@@ -26,32 +26,32 @@ public class StatsService {
 
     }
 
-    public long calculateMinSale(long[] sales) {
-        long minSale = 0;
-        for (long i = 0; i < sales.length; i++) {
+    public int calculateMinSale(long[] sales) {
+        int minSale = 0;
+        for (int i = 0; i < sales.length; i++) {
             if (sales[Math.toIntExact(i)] < sales[(int) minSale]) {
                 minSale = i;
             }
         }
-        return minSale;
+        return (int) minSale;
     }
 
-    public long calculateMaxSale(long[] sales) {
-        long maxSale = 0;
-        for (long i = 0; i < sales.length; i++) {
+    public int calculateMaxSale(long[] sales) {
+        int maxSale = 0;
+        for (int i = 0; i < sales.length; i++) {
             if (sales[Math.toIntExact(i)] > sales[(int) maxSale]) {
                 maxSale = i;
 
             }
         }
-        return maxSale;
+        return (int) maxSale;
     }
 
-    public int calculateBelow(long[] sales) {
-        int below = (int) calculateAverage(sales);
+    public int calculateMonthBelow(long[] sales) {
+        long monthBelow = (long) calculateAverage(sales);
         int count = 0;
         for (long sale : sales) {
-            if (sale < below) {
+            if (sale < monthBelow) {
                 count++;
             }
         }
@@ -60,11 +60,11 @@ public class StatsService {
         return (int) count;
     }
 
-    public int calculateAbove(long[] sales) {
-        int below = (int) calculateAverage(sales);
+    public int calculateMonthAbove(long[] sales) {
+        long monthAbove = (long) calculateAverage(sales);
         int count = 0;
         for (long sale : sales) {
-            if (sale > below) {
+            if (sale > monthAbove) {
                 count++;
             }
         }
