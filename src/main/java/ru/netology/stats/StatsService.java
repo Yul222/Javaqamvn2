@@ -48,10 +48,10 @@ public class StatsService {
     }
 
     public int calculateMonthBelow(long[] sales) {
-        long monthAverageSale = (long) calculateAverage(sales);
+        long AverageSaleInMonth = (long) calculateAverage(sales);
         int count = 0;
         for (long sale : sales) {
-            if (sale < monthAverageSale) {
+            if (sale < AverageSaleInMonth) {
                 count++;
             }
         }
@@ -61,10 +61,10 @@ public class StatsService {
     }
 
     public int calculateMonthAbove(long[] sales) {
-        long monthAverageSale = (long) calculateAverage(sales);
+        long AverageSaleInMonth = (long) calculateAverage(sales);
         int count = 0;
         for (long sale : sales) {
-            if (sale > monthAverageSale) {
+            if (sale > AverageSaleInMonth) {
                 count++;
             }
         }
