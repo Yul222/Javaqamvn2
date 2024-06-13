@@ -17,7 +17,7 @@ public class StatsService {
 
     public double calculateAverage(int[] sales) {
         int sum = calculateSumSales(sales);
-        int  average = sum/12;
+        int average = sum / 12;
 
         System.out.println(average);
 
@@ -46,16 +46,18 @@ public class StatsService {
         }
         return maxSale;
     }
+
     public double calculateBelow(int[] sales) {
         int below = (int) calculateAverage(sales);
         int count = 0;
-           for (int sale : sales) {
-if (sale < below) {
-count++;
-         }
-}
+        for (int sale : sales) {
+            if (sale < below) {
+                count++;
+            }
+        }
         return count;
-}
+    }
+
     public double calculateAbove(int[] sales) {
         int below = (int) calculateAverage(sales);
         int count = 0;
@@ -65,7 +67,7 @@ count++;
             }
         }
         return count;
-}
+    }
 }
 
 
