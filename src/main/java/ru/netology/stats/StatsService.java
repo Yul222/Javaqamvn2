@@ -55,6 +55,8 @@ public class StatsService {
                 count++;
             }
         }
+        System.out.println(count);
+
         return count;
     }
 
@@ -66,6 +68,7 @@ public class StatsService {
                 count++;
             }
         }
+        System.out.println(count);
         return count;
     }
 }
